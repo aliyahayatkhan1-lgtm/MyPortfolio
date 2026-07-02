@@ -1208,10 +1208,9 @@ section {
 ====================================================*/
 
 .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 35px;
-
 }
 
 .project-card {
@@ -3471,26 +3470,26 @@ body.light-mode .loader-content p {
 
 /* Initial Hidden State */
 
-.fade-up {
-
-    opacity: 0;
-
-    transform: translateY(60px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-
+.fade-up{
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s;
 }
 
-/* Active State */
+.fade-up.show{
+    opacity:1;
+    transform:translateY(0);
+}
 
-.fade-up.show {
+.stagger{
+    opacity:0;
+    transform:translateY(30px);
+    transition:.6s;
+}
 
-    opacity: 1;
-
-    transform: translateY(0);
-
+.stagger.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 /* Hero Animation */
@@ -3570,21 +3569,6 @@ body.light-mode .loader-content p {
 
 }
 
-/* Stagger Animation */
-
-.stagger {
-
-    opacity: 0;
-
-    transform: translateY(40px);
-
-}
-
-.stagger.show {
-
-    animation: staggerAnimation .7s forwards;
-
-}
 
 @keyframes staggerAnimation {
 
