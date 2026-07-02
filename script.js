@@ -746,15 +746,16 @@ const previewResumeBtn = document.getElementById("previewResumeBtn");
 const resumeModal = document.getElementById("resumeModal");
 const resumeClose = document.querySelector(".resume-close");
 
-/* Open Resume */
+if (previewResumeBtn && resumeModal) {
 
-previewResumeBtn.addEventListener("click", () => {
+    previewResumeBtn.addEventListener("click", () => {
 
-    resumeModal.style.display = "flex";
+        resumeModal.style.display = "flex";
+        document.body.style.overflow = "hidden";
 
-    document.body.style.overflow = "hidden";
+    });
 
-});
+}
 
 /* Close Button */
 
