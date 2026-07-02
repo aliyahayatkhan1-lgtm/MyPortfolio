@@ -299,26 +299,17 @@ filterButtons.forEach(button => {
     button.addEventListener("click", () => {
 
         filterButtons.forEach(btn => btn.classList.remove("active"));
-
         button.classList.add("active");
 
         const filter = button.dataset.filter;
 
         projectCards.forEach(card => {
 
-            if (filter === "all") {
+            if (filter === "all" || card.classList.contains(filter)) {
 
-                card.style.display = "block";
+                card.style.display = "";
 
-            }
-
-            else if (card.classList.contains(filter)) {
-
-                card.style.display = "block";
-
-            }
-
-            else {
+            } else {
 
                 card.style.display = "none";
 
@@ -329,7 +320,6 @@ filterButtons.forEach(button => {
     });
 
 });
-
 
 /*====================================================
                 CONTACT FORM
