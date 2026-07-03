@@ -3468,30 +3468,6 @@ body.light-mode .loader-content p {
             PAGE TRANSITION ANIMATIONS
 ====================================================*/
 
-/* Initial Hidden State */
-
-.fade-up{
-    opacity:0;
-    transform:translateY(40px);
-    transition:.8s;
-}
-
-.fade-up.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-.stagger{
-    opacity:0;
-    transform:translateY(30px);
-    transition:.6s;
-}
-
-.stagger.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
 /* Hero Animation */
 
 .hero-left {
