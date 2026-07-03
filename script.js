@@ -356,29 +356,16 @@ contactForm.addEventListener("submit", (e) => {
 
 const profile = document.querySelector(".profile-card");
 
-profile.addEventListener("mousemove", (e) => {
+if (profile) {
+    profile.addEventListener("mousemove", (e) => {
+        // existing code
+    });
 
-    const rect = profile.getBoundingClientRect();
-
-    const x = e.clientX - rect.left;
-
-    const y = e.clientY - rect.top;
-
-    const rotateY = (x - rect.width / 2) / 18;
-
-    const rotateX = -(y - rect.height / 2) / 18;
-
-    profile.style.transform = `perspective(1000px)
-    rotateX(${rotateX}deg)
-    rotateY(${rotateY}deg)`;
-
-});
-
-profile.addEventListener("mouseleave", () => {
-
-    profile.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg)";
-
-});
+    profile.addEventListener("mouseleave", () => {
+        profile.style.transform =
+            "perspective(1000px) rotateX(0deg) rotateY(0deg)";
+    });
+}
 
 
 
